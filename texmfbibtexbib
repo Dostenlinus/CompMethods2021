@@ -18,14 +18,14 @@
 |  BIBTEX ENTRIES   |
 `-------------------'
 
-@article{DostenTest,
-  author =        {Osten, David},
+@article{bewleyPIH,
+  author =        {Bewley, Truman},
   journal =       {Journal of Economic Theory},
   pages =         {252--292},
   title =         {The Permanent Income Hypothesis: A Theoretical
                    Formulation},
   volume =        {16},
-  year =          {2021},
+  year =          {1977},
 }
 
 @inproceedings{carroll_et_al-proc-scipy-2018,
@@ -45,7 +45,7 @@
   doi =           {10.25080/Majora-4af1f417-004},
 }
 
-@book{FriedmanATheory,
+@book{friedmanATheory,
   author =        {Friedman, Milton A.},
   publisher =     {Princeton University Press},
   title =         {A Theory of the Consumption Function},

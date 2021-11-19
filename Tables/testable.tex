@@ -1,0 +1,24 @@
+\newlength\TableWidth
+\newsavebox{\Parameters}
+\begin{table}
+  \centering
+\renewcommand{\arraystretch}{1.2}
+  \caption{Microeconomic Model Calibration}\label{table:testable}
+\sbox{\Parameters}{
+\begin{tabular}{|c|ccl|c|}
+\hline
+\multicolumn{5}{|l|}{Calibrated Parameters}  \\ \hline
+Test1                     & \multicolumn{1}{c}{Parameter} & Value & \multicolumn{2}{c|}{Source}\\ \hline
+Test2  & \multicolumn{1}{c}{$\PGro$} & 1.03 & \multicolumn{2}{c|}{PSID: Carroll (1992)} \\
+Test3                 & \multicolumn{1}{c}{$\Rfree$} & 1.04 & \multicolumn{2}{c|}{Conventional} \\
+Test4          & \multicolumn{1}{c}{$\beta$} & 0.96 & \multicolumn{2}{c|}{Conventional} \\
+Test5 & \multicolumn{1}{c}{$\CRRA$} & 2 & \multicolumn{2}{c|}{Conventional} \\
+Test6      & \multicolumn{1}{c}{$\pZero$} & 0.005 & \multicolumn{2}{c|}{PSID: Carroll (1992)} \\
+Test7  & \multicolumn{1}{c}{$\sigma_{\pshk}$} & 0.1 & \multicolumn{2}{c|}{PSID: Carroll (1992)} \\
+Test8 & \multicolumn{1}{c}{$\sigma_{\theta}$} & 0.1 & \multicolumn{2}{c|}{PSID: Carroll (1992)} \\ \hline
+\end{tabular}
+} % End \sbox
+
+\settowidth\TableWidth{\usebox{\Parameters}}
+\usebox{\Parameters}
+\end{table}

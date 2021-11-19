@@ -1,0 +1,12 @@
+        \node (Consumer) {0.999};
+        \node (Firm_i) [right of = Consumer, xshift = 5cm] {1.030};
+        \node (Other_Firms) [below of = Consumer]{1.04};
+        \node (Expected_prices) [right of = Other_Firms] 
+        {$\underbrace{1.035}_{\PFVAF}$};
+        \draw[->] (Consumer) to node {Observes price} (Firm_i);
+        \draw[->] (Consumer) to node [swap] {${\RIC}$} (Other_Firms);
+        \draw[->] (Consumer) to node [swap] {${\PFFVAC}$} (Expected_prices);
+        \draw[->] (Firm_i) to node {${\FHWC}$} (Expected_prices);
+        
+
+
