@@ -18,14 +18,14 @@
 |  BIBTEX ENTRIES   |
 `-------------------'
 
-@article{bewleyPIH,
+@article{DostenTest,
   author =        {Bewley, Truman},
   journal =       {Journal of Economic Theory},
   pages =         {252--292},
   title =         {The Permanent Income Hypothesis: A Theoretical
                    Formulation},
   volume =        {16},
-  year =          {1977},
+  year =          {2021},
 }
 
 @inproceedings{carroll_et_al-proc-scipy-2018,
