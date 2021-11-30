@@ -9,7 +9,7 @@ echo '' ; echo 'Installing requirements' ; echo ''
 echo '' ; echo 'Producing figures' ; echo ''
 
 cd "."
-ipython BufferStockTheory.ipynb
+ipython ProjectDLO.ipynb
 
 [[ -e latexdefs.tex ]] && rm -f latexdefs.tex # Delete junk file that might be created
 
