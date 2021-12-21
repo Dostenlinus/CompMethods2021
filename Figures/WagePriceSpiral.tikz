@@ -1,0 +1,6 @@
+        \node (Wages) {Wages};
+        \node (Prices) [right of = Wages, xshift = 5 cm] {Prices};
+        \node[draw] at (5.5,2) (Abating Effects) {\begin{tabular}{c} Abating Factors: \\ Import Competition \\ Market Concentration \\ Wage-Productivity Gap?\end{tabular}}; 
+    \node[ellipse,draw = orange, text = orange,  fill = cyan!20, scale = 2.3] (e) at (5.5,0) {Wage Price Spiral};
+    \draw [->,draw = orange, very thick] (5.4,0.9) -- (5.6,0.9); 
+    \draw [<-,draw = orange, very thick] (5.4,-0.9) -- (5.6,-0.9); 
