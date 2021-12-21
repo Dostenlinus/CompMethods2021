@@ -59,7 +59,7 @@
 %          \texttt{~~~~~~PDF:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory/BufferStockTheory.pdf}{https://\owner.github.io/BufferStockTheory/BufferStockTheory.pdf}} \\ % Owner is defined in% Resources/owner.tex
 %          \texttt{~~~Slides:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory/BufferStockTheory-Slides.pdf}{https://\owner.github.io/BufferStockTheory/BufferStockTheory-Slides.pdf}} \\
 %          \texttt{~Appendix:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory\#Appendices}{https://\owner.github.io/BufferStockTheory\#Appendices}}    \\
-%          \texttt{~~~GitHub:~} \> \> \texttt{\href{https://github.com/\owner/BufferStockTheory}{https://github.com/\owner/BufferStockTheory}} \\
+%          \texttt{~~~GitHub:~} \> \> \texttt{https://github.com/\owner/CompMethods2021_OstenDL} 
 %      \end{tabbing}
 %    \end{center}
 %    The \href{https://econ-ark.org/materials/BufferStockTheory?dashboard}{dashboard} lets users see consequences of alternative parameters in an interactive framework.} % end parbox{\textwidth}
@@ -87,25 +87,43 @@
 %\section{Introduction}\label{sec:intro}
 \newcommand{\introduction}{The wage price spiral has seen considerable attention in the 80s and 90s in the wake of the high inflation during the 60s and 70s. Since then the interest in the topic has followed the steady decline of the inflation rate. The recent contributions concentrated on explaining how the mechanism of the wage price spiral got muted over time and can therefore explain the surprisingly low inflation rates of the 2000s.\cite{Mehra2000} found that wages only had a significant effect on prices in the high inflation era of the 60s and 70s, but not in the 50s, 80s and 90s. It stands to reason that either lasting periods of high inflation are only observed if the wage price spiral is effctive, or that an elevated level of inflation is needed to start the spiral. This distinction is particularly interesting in light of the revived inflation rates in of the 2020s. The big question is, will this start sufficient upward pressure on wages to spin the spiral into action, or are there underlying forces that muted the pass through so that rising prices are not self-reinforcing.\\
 
-Peneva and Rudd (2015) and more recently \cite{Heiseetal2020} found a weakened pass through from wages to prices, which \cite{Heiseetal2020} explain by import competition and increased market concentration in the manifacturing sector. \cite{Heiseetal2020} do control for total factor productivity (TFP) but not for labor productivity. In light of the structural changes since the mid 80s this might be a flaw in their analysis, as wages have been falling behind labor productivity between 1985 and 2012. Since then they have been stagnating and even slightly declining (see Figure 123). It might be worth exploring how much this wage-productivity gap influences manufacturers price setting decisions.} 
+  Peneva and Rudd (2015) and more recently \cite{Heiseetal2020} found a weakened pass through from wages to prices, which \cite{Heiseetal2020} explain by increasing import competition and market concentration in the manifacturing sector since the turn of the century. \cite{Heiseetal2020} control for total factor productivity (TFP) but not for labor productivity. In light of the structural changes since the mid 80s this might be a flaw in their analysis, as wages have been falling behind labor productivity between 1985 and 2012. Since then labor productivity in manufacturing has been stagnating and even slightly declining (see Figure \ref{Fig:WageGap} ). It might be worth exploring how much this wage-productivity gap influences manufacturers price setting decisions.\\
+A potentially differeing explanation to \cite{Heiseetal2020} is that through reduced bargaining power of workers, firms were able to expand their profit margins since 1985, but still face an elastic demand of their products. THus, wage rises might not be passed through to prices in the same degree as in the 70s, as profits on otherwise lost demand outweigh the loss due to smaller profit margins on existing demand. } 
 
 \begin{minipage}{0.9\textwidth}
     \introduction
 \end{minipage}
+\input{\FigDir/WagePriceSpiral}
+\input{\FigDir/WageGap}\label{Fig:WageGap}
 
 \hypertarget{The-Model}{}
 
-\section{The Model}
+\section{Further Discussion}
 
-\subsection{Setup}\label{subsec:Setup}
-
-
-\begin{verbatimwrite}{\EqDir/OLG}
-  \begin{align}% \label{eq:OLG}
-    \bar{k} = \left[\frac{(1-\epsilon)\beta}{\Xi (1+\beta)}^{1/(1-\epsilon)} \right]
+\subsection{Phillips Curve with Productivity}\label{subsec:Setup}
+Another angle is offered by \cite{BallMoffitt}, where the authors estimate the following Wage Phillips Curve (WPC), which is based on the assumption that workers have wage aspirations $A$ based on real wages in the past and on current labor productivity growth $\theta$:
+\begin{verbatimwrite}{\EqDir/WPC}
+ \begin{align}% \label{eq:WPC}
+   \omega = \alpha + \pi_{-1} - \gamma \mathcal{U} + \delta \theta + (1- \delta) A + \eta
   \end{align}
 \end{verbatimwrite}
-\input{\LtxDir\EqDir/OLG}
+\input{\LtxDir\EqDir/WPC}
+
+where $\alpha$ is a constant, $\pi_{-1}$ is inflation from the past period, $\mathcal{U}$ is the unemployment rate and $\eta$ is an error term. Therefore, the authors assume the same constant re-bargaining between the firm and its workers as the wage price spiral literature of the 80s and 90s (e.g. Blanchard), where both workers and firm try to achieve a certain share of the profits, and where workers bargaining power is undermined by the level of unemployment.\\
+
+\cite{BallMoffitt} then continue to derive the Price Phillips Curve (PPC) from the WPC:
+
+\begin{verbatimwrite}{\EqDir/PPC}
+ \begin{align}% \label{eq:PPC}
+   \pi = \alpha + \pi_{-1} - \gamma \mathcal{U} + (1-\delta)(\theta-A) + \epsilon
+  \end{align}
+\end{verbatimwrite}
+\input{\LtxDir\EqDir/PPC}
+
+
+
+
+
 
 
 %\providecommand{\figName}{RelatePFGICFHWCRICPFFVAC} % Allows generic definition of hypertargets based on title of figure
@@ -117,17 +135,6 @@ Peneva and Rudd (2015) and more recently \cite{Heiseetal2020} found a weakened p
 \hypertarget{PF-Constrained-Solution}{}
 \hypertarget{Constrained-Solution}{}
 
-\input{\TableDir/testable}
-
-
-%\input{\FigDir/StickyPriceLogic} % Read in the tex to generate the figure
-
-\input{\FigDir/DLOTestFig}
-
-Just a citation test: \cite{DostenTest}; a second citation test: \cite{DostenTest2}
-
-\input{\FigDir/WagePriceSpiral}
-\input{\FigDir/WageGap}
 
 
 

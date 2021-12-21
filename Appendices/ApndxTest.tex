@@ -1,7 +1,9 @@
 % -*- mode: LaTeX; TeX-PDF-mode: t; -*-
 \input{./econtexRoot}\documentclass[\econtexRoot/ProjectDLO]{subfiles}
 \input{./econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
-\onlyinsubfile{\externaldocument{\LaTeXGenerated/ProjectDLO}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+%\onlyinsubfile{\externaldocument{\LaTeXGenerated/ProjectDLO}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+
+\onlyinsubfile{\externaldocument{ProjectDLO}}
 
 \begin{document}
 \let\TableWidth\relax
@@ -9,7 +11,16 @@
 
 \section{Test Appendix}\label{sec:ApndxTest}
 
-Introduction to the appendix
+
+\begin{figure}[tbp]
+\centerline{\includegraphics[width=6in]{\FigDir/DLOTestFig.pdf}}
+\caption{Test Figure from Jupyter Notebook}
+\end{figure}
+
+\begin{figure}[tbp]
+\centerline{\includegraphics[width=6in]{\TableDir/testable.pdf}}
+\caption{Test Figure from Jupyter Notebook}
+\end{figure}
 
 
 
