@@ -87,13 +87,13 @@
 %\section{Introduction}\label{sec:intro}
 \newcommand{\introduction}{The wage price spiral has seen considerable attention in the 80s and 90s in the wake of the high inflation during the 60s and 70s. Since then the interest in the topic has followed the steady decline of the inflation rate. The recent contributions concentrated on explaining how the mechanism of the wage price spiral got muted over time and can therefore explain the surprisingly low inflation rates of the 2000s.\cite{Mehra2000} found that wages only had a significant effect on prices in the high inflation era of the 60s and 70s, but not in the 50s, 80s and 90s. It stands to reason that either lasting periods of high inflation are only observed if the wage price spiral is effctive, or that an elevated level of inflation is needed to start the spiral. This distinction is particularly interesting in light of the revived inflation rates in of the 2020s. The big question is, will this start sufficient upward pressure on wages to spin the spiral into action, or are there underlying forces that muted the pass through so that rising prices are not self-reinforcing.\\
 
-  Peneva and Rudd (2015) and more recently \cite{Heiseetal2020} found a weakened pass through from wages to prices, which \cite{Heiseetal2020} explain by increasing import competition and market concentration in the manifacturing sector since the turn of the century. \cite{Heiseetal2020} control for total factor productivity (TFP) but not for labor productivity. In light of the structural changes since the mid 80s this might be a flaw in their analysis, as wages have been falling behind labor productivity between 1985 and 2012. Since then labor productivity in manufacturing has been stagnating and even slightly declining (see Figure \ref{Fig:WageGap} ). It might be worth exploring how much this wage-productivity gap influences manufacturers price setting decisions.\\
+  \cite{PenevaRudd}  and more recently \cite{Heiseetal2020} found a weakened pass through from wages to prices, which \cite{Heiseetal2020} explain by increasing import competition and market concentration in the manifacturing sector since the turn of the century. \cite{Heiseetal2020} control for total factor productivity (TFP) but not for labor productivity. In light of the structural changes since the mid 80s this might be a flaw in their analysis, as wages have been falling behind labor productivity between 1985 and 2012. Since then labor productivity in manufacturing has been stagnating and even slightly declining (see Figure \ref{Fig:WageGap} ). It might be worth exploring how much this wage-productivity gap influences manufacturers price setting decisions.\\
 A potentially differeing explanation to \cite{Heiseetal2020} is that through reduced bargaining power of workers, firms were able to expand their profit margins since 1985, but still face an elastic demand of their products. THus, wage rises might not be passed through to prices in the same degree as in the 70s, as profits on otherwise lost demand outweigh the loss due to smaller profit margins on existing demand. } 
 
 \begin{minipage}{0.9\textwidth}
     \introduction
 \end{minipage}
-\input{\FigDir/WagePriceSpiral}
+
 \input{\FigDir/WageGap}\label{Fig:WageGap}
 
 \hypertarget{The-Model}{}
@@ -109,7 +109,7 @@ Another angle is offered by \cite{BallMoffitt}, where the authors estimate the f
 \end{verbatimwrite}
 \input{\LtxDir\EqDir/WPC}
 
-where $\alpha$ is a constant, $\pi_{-1}$ is inflation from the past period, $\mathcal{U}$ is the unemployment rate and $\eta$ is an error term. Therefore, the authors assume the same constant re-bargaining between the firm and its workers as the wage price spiral literature of the 80s and 90s (e.g. Blanchard), where both workers and firm try to achieve a certain share of the profits, and where workers bargaining power is undermined by the level of unemployment.\\
+where $\alpha$ is a constant, $\pi_{-1}$ is inflation from the past period, $\mathcal{U}$ is the unemployment rate and $\eta$ is an error term. Therefore, the authors assume the same constant re-bargaining between the firm and its workers as the wage price spiral literature of the 80s and 90s (e.g. \cite{Blanchard1986}), where both workers and firm try to achieve a certain share of the profits, and where workers bargaining power is undermined by the level of unemployment.\\
 
 \cite{BallMoffitt} then continue to derive the Price Phillips Curve (PPC) from the WPC:
 
@@ -120,10 +120,18 @@ where $\alpha$ is a constant, $\pi_{-1}$ is inflation from the past period, $\ma
 \end{verbatimwrite}
 \input{\LtxDir\EqDir/PPC}
 
+They find a signifacantly negative effect of the the gap between productivity growth and wage aspirations. I.e. if productivity rises quicker than wage aspirations then inflation of prices will be muted. This result supports the idea that the excess labor productivity accumulated since the 80s might play a crucial role in explaining the muted wage-price pass through today.\\
+
+Another interesting piece in this strand of the literature has been shown by \cite{BallMazumder} who show that the pass-through from headline inflation to median inflation is significant in Europe but not the US. As the most likely channel of pass through frm headline inflation to median inflation we can count the impact of intermediate goods and potentially higher wage demends, especially from unionized workers, of which there is a higher fraction in Europe than in the US.\\
+
+My proposed continuation of the literature is therefore threefold: First, I will explore the flip side of the wage price spiral as depicted in Figure \ref{Fig:WPS}, which has not garnered a lot of attention in the literature. The underlying reason could be the challenge of identification, as the risk of reverse causality, i.e. measuring the effect of prices on wages versus wages on prices, is hard to control for. My proposal is to use the concept of tradable and non-tradable goods and services to control for the impact of elevated prices on wages.\\
+Second, I propose a simple oligopoly model in which demand is downward sloping in price, and marginal cost depends mainly on the ratio of wages over labor productivity.\\
+Finally, I plan to look into a differentiating analysis of the bargaining power of workers in the US versus the EU, so see how much bargaining power for workers drives the potential of a wage price spiral.
+
+\input{\FigDir/WagePriceSpiral}\label{Fig:WPS}
 
 
-
-
+\input{\TableDir/testable}
 
 
 %\providecommand{\figName}{RelatePFGICFHWCRICPFFVAC} % Allows generic definition of hypertargets based on title of figure
